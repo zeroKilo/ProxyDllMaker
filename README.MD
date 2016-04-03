@@ -1,0 +1,1 @@
+This tool can generate code and export definitions to create a proxy DLL in 32bit and 64bit
