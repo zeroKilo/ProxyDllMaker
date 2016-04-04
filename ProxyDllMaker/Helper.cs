@@ -91,6 +91,12 @@ namespace ProxyDllMaker
                 throw new Exception("Failed to enum symbols.");
             }
             SymCleanup(hCurrentProcess);
+            for (int i = 0; i < infolist.Count; i++)
+            {
+                ExportInfo e = infolist[i];
+                e.Index = i;
+                infolist[i] = e;
+            }
             return infolist;
         }
 
@@ -98,6 +104,31 @@ namespace ProxyDllMaker
         {
             public string Name;
             public string Definition;
+            public int WayOfExport; //0=none, 1=withasm, 2=withcalls, 3=withlink
+            public int Index;
+        }
+
+        public static string ExportInfoToString(ExportInfo e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(e.Index + " : \"" + e.Name + "\" Export:");
+            switch (e.WayOfExport)
+            {
+                case 0:
+                    sb.Append(" not exported");
+                    break;
+                case 1:
+                    sb.Append(" with asm jmp");
+                    break;
+                case 2:
+                    sb.Append(" with call");
+                    break;
+                case 3:
+                    sb.Append(" with link");
+                    break;
+
+            }
+            return sb.ToString();
         }
     }
 }

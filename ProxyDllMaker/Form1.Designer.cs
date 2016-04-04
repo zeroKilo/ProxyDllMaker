@@ -31,9 +31,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDLLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadDefinitionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveCFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveDEFFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withasmJumpsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withCallsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.generateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -47,8 +54,6 @@
             this.rtb2 = new System.Windows.Forms.RichTextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.rtb3 = new System.Windows.Forms.RichTextBox();
-            this.saveCFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveDEFFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -64,7 +69,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.generateToolStripMenuItem});
+            this.generateToolStripMenuItem,
+            this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(534, 24);
@@ -75,6 +81,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openDLLToolStripMenuItem,
+            this.loadDefinitionToolStripMenuItem,
             this.saveCFileToolStripMenuItem,
             this.saveDEFFileToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -84,34 +91,82 @@
             // openDLLToolStripMenuItem
             // 
             this.openDLLToolStripMenuItem.Name = "openDLLToolStripMenuItem";
-            this.openDLLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openDLLToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.openDLLToolStripMenuItem.Text = "Open DLL...";
             this.openDLLToolStripMenuItem.Click += new System.EventHandler(this.openDLLToolStripMenuItem_Click);
+            // 
+            // loadDefinitionToolStripMenuItem
+            // 
+            this.loadDefinitionToolStripMenuItem.Name = "loadDefinitionToolStripMenuItem";
+            this.loadDefinitionToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadDefinitionToolStripMenuItem.Text = "Load Definition...";
+            this.loadDefinitionToolStripMenuItem.Click += new System.EventHandler(this.loadDefinitionToolStripMenuItem_Click);
+            // 
+            // saveCFileToolStripMenuItem
+            // 
+            this.saveCFileToolStripMenuItem.Name = "saveCFileToolStripMenuItem";
+            this.saveCFileToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveCFileToolStripMenuItem.Text = "Save C File";
+            this.saveCFileToolStripMenuItem.Click += new System.EventHandler(this.saveCFileToolStripMenuItem_Click);
+            // 
+            // saveDEFFileToolStripMenuItem
+            // 
+            this.saveDEFFileToolStripMenuItem.Name = "saveDEFFileToolStripMenuItem";
+            this.saveDEFFileToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveDEFFileToolStripMenuItem.Text = "Save DEF File";
+            this.saveDEFFileToolStripMenuItem.Click += new System.EventHandler(this.saveDEFFileToolStripMenuItem_Click);
             // 
             // generateToolStripMenuItem
             // 
             this.generateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.withasmJumpsToolStripMenuItem,
-            this.withCallsToolStripMenuItem});
+            this.withCallsToolStripMenuItem,
+            this.withLinksToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.generateToolStripMenuItem1});
             this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
             this.generateToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.generateToolStripMenuItem.Text = "Generate";
             // 
             // withasmJumpsToolStripMenuItem
             // 
-            this.withasmJumpsToolStripMenuItem.Enabled = false;
             this.withasmJumpsToolStripMenuItem.Name = "withasmJumpsToolStripMenuItem";
-            this.withasmJumpsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.withasmJumpsToolStripMenuItem.Text = "with _asm jumps...";
+            this.withasmJumpsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.withasmJumpsToolStripMenuItem.Text = "all with _asm jumps...";
             this.withasmJumpsToolStripMenuItem.Click += new System.EventHandler(this.withasmJumpsToolStripMenuItem_Click);
             // 
             // withCallsToolStripMenuItem
             // 
-            this.withCallsToolStripMenuItem.Enabled = false;
             this.withCallsToolStripMenuItem.Name = "withCallsToolStripMenuItem";
-            this.withCallsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.withCallsToolStripMenuItem.Text = "with calls...";
+            this.withCallsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.withCallsToolStripMenuItem.Text = "all with calls...";
             this.withCallsToolStripMenuItem.Click += new System.EventHandler(this.withCallsToolStripMenuItem_Click);
+            // 
+            // withLinksToolStripMenuItem
+            // 
+            this.withLinksToolStripMenuItem.Name = "withLinksToolStripMenuItem";
+            this.withLinksToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.withLinksToolStripMenuItem.Text = "all with links...";
+            this.withLinksToolStripMenuItem.Click += new System.EventHandler(this.withLinksToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 6);
+            // 
+            // generateToolStripMenuItem1
+            // 
+            this.generateToolStripMenuItem1.Name = "generateToolStripMenuItem1";
+            this.generateToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.generateToolStripMenuItem1.Text = "Generate";
+            this.generateToolStripMenuItem1.Click += new System.EventHandler(this.generateToolStripMenuItem1_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -186,6 +241,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(520, 411);
             this.listBox1.TabIndex = 0;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // tabPage3
             // 
@@ -238,7 +294,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(512, 407);
+            this.tabPage5.Size = new System.Drawing.Size(512, 385);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Generated Definitions";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -250,24 +306,10 @@
             this.rtb3.Font = new System.Drawing.Font("Courier New", 10F);
             this.rtb3.Location = new System.Drawing.Point(3, 3);
             this.rtb3.Name = "rtb3";
-            this.rtb3.Size = new System.Drawing.Size(506, 401);
+            this.rtb3.Size = new System.Drawing.Size(506, 379);
             this.rtb3.TabIndex = 1;
             this.rtb3.Text = "";
             this.rtb3.WordWrap = false;
-            // 
-            // saveCFileToolStripMenuItem
-            // 
-            this.saveCFileToolStripMenuItem.Name = "saveCFileToolStripMenuItem";
-            this.saveCFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveCFileToolStripMenuItem.Text = "Save C File";
-            this.saveCFileToolStripMenuItem.Click += new System.EventHandler(this.saveCFileToolStripMenuItem_Click);
-            // 
-            // saveDEFFileToolStripMenuItem
-            // 
-            this.saveDEFFileToolStripMenuItem.Name = "saveDEFFileToolStripMenuItem";
-            this.saveDEFFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveDEFFileToolStripMenuItem.Text = "Save DEF File";
-            this.saveDEFFileToolStripMenuItem.Click += new System.EventHandler(this.saveDEFFileToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -279,7 +321,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Proxy DLL Maker 1.0 by Warranty Voider";
+            this.Text = "Proxy DLL Maker 1.1 by Warranty Voider";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -319,6 +361,11 @@
         private System.Windows.Forms.RichTextBox rtb3;
         private System.Windows.Forms.ToolStripMenuItem saveCFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveDEFFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadDefinitionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem withLinksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generateToolStripMenuItem1;
     }
 }
 

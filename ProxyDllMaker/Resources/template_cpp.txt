@@ -5,15 +5,16 @@
 #pragma pack(1)
 
 HINSTANCE hL;
-FARPROC p[##ph1##] = {0};
+##ph1##
 
 extern "C" BOOL WINAPI DllMain(HINSTANCE hInst,DWORD reason,LPVOID)
 {
 	if (reason == DLL_PROCESS_ATTACH)
 	{
-		hL = LoadLibrary(_T(".\\##ph2##_org.dll"));
+		hL = LoadLibrary(_T(".\\##ph2##.dll"));
 		if (!hL) return false;
-##ph3##	}
+##ph3##		MessageBoxA(0, "Hello World", "Hi", 0);
+	}
 	if (reason == DLL_PROCESS_DETACH)
 		FreeLibrary(hL);
 	return 1;
