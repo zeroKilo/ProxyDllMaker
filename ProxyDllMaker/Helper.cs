@@ -111,7 +111,11 @@ namespace ProxyDllMaker
         public static string ExportInfoToString(ExportInfo e)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(e.Index + " : \"" + e.Name + "\" Export:");
+            sb.Append(e.Index + "\t: \"" + e.Name + "\"");
+            for (int i = 0; i < 10; i++)
+                if (e.Name.Length + 12 < i * 8)
+                    sb.AppendLine("\t");
+            sb.AppendLine("Export:");
             switch (e.WayOfExport)
             {
                 case 0:

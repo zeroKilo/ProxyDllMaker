@@ -53,23 +53,25 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 10F);
             this.textBox1.Location = new System.Drawing.Point(0, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(454, 20);
+            this.textBox1.Size = new System.Drawing.Size(454, 23);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(0, 60);
+            this.textBox2.Font = new System.Drawing.Font("Courier New", 10F);
+            this.textBox2.Location = new System.Drawing.Point(0, 63);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(454, 20);
+            this.textBox2.Size = new System.Drawing.Size(454, 23);
             this.textBox2.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 40);
+            this.label2.Location = new System.Drawing.Point(0, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(454, 20);
             this.label2.TabIndex = 2;
@@ -79,15 +81,16 @@
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.Location = new System.Drawing.Point(0, 100);
+            this.textBox3.Font = new System.Drawing.Font("Courier New", 10F);
+            this.textBox3.Location = new System.Drawing.Point(0, 106);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(454, 20);
+            this.textBox3.Size = new System.Drawing.Size(454, 23);
             this.textBox3.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(0, 80);
+            this.label3.Location = new System.Drawing.Point(0, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(454, 20);
             this.label3.TabIndex = 4;
@@ -97,7 +100,7 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(0, 120);
+            this.label4.Location = new System.Drawing.Point(0, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(454, 20);
             this.label4.TabIndex = 6;
@@ -107,10 +110,11 @@
             // comboBox1
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.Font = new System.Drawing.Font("Courier New", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 140);
+            this.comboBox1.Location = new System.Drawing.Point(0, 149);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(454, 21);
+            this.comboBox1.Size = new System.Drawing.Size(454, 24);
             this.comboBox1.TabIndex = 7;
             // 
             // button1

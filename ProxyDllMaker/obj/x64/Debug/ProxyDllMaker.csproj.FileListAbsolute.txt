@@ -38,3 +38,5 @@ D:\CODE\GitHub\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.FunctionD
 D:\CODE\GitHub\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.OptionForm.resources
 D:\CODE\GitHub\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.Properties.Resources.resources
 D:\CODE\GitHub\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.csproj.GenerateResource.Cache
+D:\bernd\code\c#\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.UnDecorator.resources
+D:\CODE\GitHub\ProxyDllMaker\ProxyDllMaker\obj\x64\Debug\ProxyDllMaker.UnDecorator.resources

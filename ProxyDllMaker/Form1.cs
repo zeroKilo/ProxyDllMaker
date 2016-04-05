@@ -37,11 +37,13 @@ namespace ProxyDllMaker
                 {
                     status.Text = "64 BIT";
                     statusStrip1.BackColor = Color.LightBlue;
+                    withasmJumpsToolStripMenuItem.Enabled = false;
                 }
                 else
                 {
                     status.Text = "32 BIT";
                     statusStrip1.BackColor = Color.LightGreen;
+                    withasmJumpsToolStripMenuItem.Enabled = true;
                 }
                 rtb1.Text = Helper.DumpObject(header);
                 try
@@ -67,6 +69,11 @@ namespace ProxyDllMaker
 
         private void withasmJumpsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!header.Is32BitHeader)
+            {
+                MessageBox.Show("ASM jumps not available for x64!");
+                return;
+            }
             for (int i = 0; i < exportlist.Count; i++)
             {
                 Helper.ExportInfo ex = exportlist[i];
@@ -126,20 +133,6 @@ namespace ProxyDllMaker
                 Helper.ExportInfo ex = exportlist[i];
                 ex.WayOfExport = 3;
                 exportlist[i] = ex;
-                RefreshExportList();
-            }
-        }
-
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            int n = listBox1.SelectedIndex;
-            if (n == -1)
-                return;
-            FunctionDialog d = new FunctionDialog();
-            d.info = exportlist[n];
-            if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                exportlist[n] = d.info;
                 RefreshExportList();
             }
         }
@@ -323,6 +316,79 @@ namespace ProxyDllMaker
             sb.Append("\")");
             sb.AppendLine();
             return sb.ToString();
+        }
+
+        private void undecoratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new UnDecorator().Show();
+        }
+
+        private void listBox1_DoubleClick_1(object sender, EventArgs e)
+        {
+            int n = listBox1.SelectedIndex;
+            if (n == -1)
+                return;
+            FunctionDialog d = new FunctionDialog();
+            d.info = exportlist[n];
+            d.header = header;
+            if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                exportlist[n] = d.info;
+                RefreshExportList();
+            }
+        }
+
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            RefreshPreview();
+        }
+
+        private void undecorateAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < exportlist.Count; i++)
+            {
+
+                Helper.ExportInfo info = exportlist[i];
+                StringBuilder builder = new StringBuilder(255);
+                DbgHelper.UnDecorateSymbolName(info.Name, builder, builder.Capacity, DbgHelper.UnDecorateFlags.UNDNAME_COMPLETE);
+                info.Definition = builder.ToString();
+                exportlist[i] = info;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshPreview();
+        }
+
+        private void RefreshPreview()
+        {
+            int n = listBox1.SelectedIndex;
+            if (n == -1)
+                return;
+            Helper.ExportInfo info = exportlist[n];
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("Index\t\t: {0}\n", info.Index);
+            sb.Append("Export\t:");
+            switch (info.WayOfExport)
+            {
+                case 0:
+                    sb.Append(" not exported");
+                    break;
+                case 1:
+                    sb.Append(" with asm jmp");
+                    break;
+                case 2:
+                    sb.Append(" with call");
+                    break;
+                case 3:
+                    sb.Append(" with link");
+                    break;
+            }
+            sb.AppendLine();
+            sb.AppendFormat("Name\t\t: {0}\n", info.Name);
+            sb.AppendFormat("Definition\t: {0}", info.Definition);
+            rtb4.Text = sb.ToString();
         }
     }
 }
