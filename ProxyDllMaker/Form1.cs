@@ -69,29 +69,30 @@ namespace ProxyDllMaker
 
         private void withasmJumpsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!header.Is32BitHeader)
+            if (listBox1.SelectedIndices.Count == 0)
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                    listBox1.SetSelected(i, true);
+            for (int i = 0; i < listBox1.SelectedIndices.Count; i++)
             {
-                MessageBox.Show("ASM jumps not available for x64!");
-                return;
-            }
-            for (int i = 0; i < exportlist.Count; i++)
-            {
-                Helper.ExportInfo ex = exportlist[i];
+                Helper.ExportInfo ex = exportlist[listBox1.SelectedIndices[i]];
                 ex.WayOfExport = 1;
-                exportlist[i] = ex;
-                RefreshExportList();
+                exportlist[listBox1.SelectedIndices[i]] = ex;
             }
+            RefreshExportList();
         }
 
         private void withCallsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < exportlist.Count; i++)
+            if (listBox1.SelectedIndices.Count == 0)
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                    listBox1.SetSelected(i, true);
+            for (int i = 0; i < listBox1.SelectedIndices.Count; i++)
             {
-                Helper.ExportInfo ex = exportlist[i];
+                Helper.ExportInfo ex = exportlist[listBox1.SelectedIndices[i]];
                 ex.WayOfExport = 2;
-                exportlist[i] = ex;
-                RefreshExportList();
+                exportlist[listBox1.SelectedIndices[i]] = ex;
             }
+            RefreshExportList();
         }
 
         private void saveCFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,13 +129,16 @@ namespace ProxyDllMaker
 
         private void withLinksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < exportlist.Count; i++)
+            if (listBox1.SelectedIndices.Count == 0)
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                    listBox1.SetSelected(i, true);
+            for (int i = 0; i < listBox1.SelectedIndices.Count; i++)
             {
-                Helper.ExportInfo ex = exportlist[i];
+                Helper.ExportInfo ex = exportlist[listBox1.SelectedIndices[i]];
                 ex.WayOfExport = 3;
-                exportlist[i] = ex;
-                RefreshExportList();
+                exportlist[listBox1.SelectedIndices[i]] = ex;
             }
+            RefreshExportList();
         }
 
         private void loadDefinitionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,7 +150,9 @@ namespace ProxyDllMaker
                 string[] input = File.ReadAllLines(d.FileName);
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < exportlist.Count; i++)
+                    if(exportlist[i].WayOfExport == 2)
                 {
+                    
                     bool found = false;
                     foreach (string line in input)
                         if (line.Contains(exportlist[i].Name + "("))
@@ -158,8 +164,14 @@ namespace ProxyDllMaker
                             break;
                         }
                     if (!found)
+                    {
                         sb.AppendLine(exportlist[i].Name);
+                        Helper.ExportInfo ex = exportlist[i];
+                        ex.WayOfExport = 0;
+                        exportlist[i] = ex;
+                    }
                 }
+                RefreshExportList();
                 if (sb.Length != 0)
                     MessageBox.Show("Error: no definition(s) found for:\n" + sb.ToString()+ "\n please use \"asm jmp\" or \"link\" as method for those exports");
             }

@@ -30,7 +30,15 @@ namespace ProxyDllMaker
                 comboBox1.Items.Add("with asm jmp");
             comboBox1.Items.Add("with call");
             comboBox1.Items.Add("with link");
-            comboBox1.SelectedIndex = info.WayOfExport;
+            if (header.Is32BitHeader)
+                comboBox1.SelectedIndex = info.WayOfExport;
+            else
+            {
+                if (info.WayOfExport == 0)
+                    comboBox1.SelectedIndex = 0;
+                else
+                    comboBox1.SelectedIndex = info.WayOfExport - 1;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
