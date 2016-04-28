@@ -4,19 +4,20 @@
 #include <tchar.h>
 #pragma pack(1)
 
-HINSTANCE hL;
 ##ph1##
 
 extern "C" BOOL WINAPI DllMain(HINSTANCE hInst,DWORD reason,LPVOID)
 {
+	static HINSTANCE hL;
 	if (reason == DLL_PROCESS_ATTACH)
 	{
 		hL = LoadLibrary(_T(".\\##ph2##.dll"));
 		if (!hL) return false;
-##ph3##		MessageBoxA(0, "Hello World", "Hi", 0);
+##ph3##		MessageBox(NULL, _T("Hello World"), _T("Hi"), NULL);
 	}
 	if (reason == DLL_PROCESS_DETACH)
 		FreeLibrary(hL);
-	return 1;
+	return TRUE;
 }
+
 ##ph4##
