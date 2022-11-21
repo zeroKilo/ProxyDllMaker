@@ -21,6 +21,7 @@ namespace ProxyDllMaker
         {
             Options.suffix = textBox1.Text;
             Options.prefix = textBox2.Text;
+            Options.emptyFunc = textBox3.Text;
             Options.symMethod = (Helper.SymbolRetrieveMethod)comboBox1.SelectedIndex;
             Options.SaveToFile("settings.txt");
             this.Close();
@@ -30,6 +31,7 @@ namespace ProxyDllMaker
         {
             textBox1.Text = Options.suffix;
             textBox2.Text = Options.prefix;
+            textBox3.Text = Options.emptyFunc;
             comboBox1.SelectedIndex = (int)Options.symMethod;
         }
     }
