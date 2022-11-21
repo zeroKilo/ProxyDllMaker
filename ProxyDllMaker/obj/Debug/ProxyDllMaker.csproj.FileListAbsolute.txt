@@ -1,9 +1,0 @@
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\bin\Debug\ProxyDllMaker.exe.config
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.csprojResolveAssemblyReference.cache
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.Form1.resources
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.Properties.Resources.resources
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.csproj.GenerateResource.Cache
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\bin\Debug\ProxyDllMaker.exe
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\bin\Debug\ProxyDllMaker.pdb
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.exe
-D:\CODE\c#\ProxyDllMaker\ProxyDllMaker\obj\Debug\ProxyDllMaker.pdb

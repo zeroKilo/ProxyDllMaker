@@ -48,7 +48,7 @@ namespace ProxyDllMaker
                 rtb1.Text = Helper.DumpObject(header);
                 try
                 {
-                    exportlist = Helper.GetExports(d.FileName);
+                    exportlist = Helper.GetExports(d.FileName, Options.symMethod);
                     RefreshExportList();
                 }
                 catch (Exception ex)
@@ -217,19 +217,19 @@ namespace ProxyDllMaker
             sb = new StringBuilder();
             count = 0;
             foreach (Helper.ExportInfo e in exportlist)
-                switch (e.WayOfExport)
-                {
-                    case 1:
-                        sb.AppendLine(MakeAsmJump(e, count++));
-                        break;
-                    case 2:
-                        
-                        sb.AppendLine(MakeCall(e, count++));
-                        break;
-                    case 3:
-                        sb.AppendLine(MakeLink(e));
-                        break;
-                }
+                if(!e.isEmpty)
+                    switch (e.WayOfExport)
+                    {
+                        case 1:
+                            sb.AppendLine(MakeAsmJump(e, count++));
+                            break;
+                        case 2:
+                            sb.AppendLine(MakeCall(e, count++));
+                            break;
+                        case 3:
+                            sb.AppendLine(MakeLink(e));
+                            break;
+                    }
             temp = temp.Replace("##ph4##", sb.ToString());
             rtb2.Text = temp;
         }

@@ -1,20 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyDllMaker", "ProxyDllMaker\ProxyDllMaker.csproj", "{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}.Debug|Any CPU.Build.0 = Debug|x64
-		{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3120A1EB-F52B-460E-87FB-DBAF640FFBDF}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53CEC752-6CDE-4EE0-B1E7-62DEA852F6DE}
 	EndGlobalSection
 EndGlobal

@@ -96,34 +96,34 @@
             this.saveCFileToolStripMenuItem,
             this.saveDEFFileToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openDLLToolStripMenuItem
             // 
             this.openDLLToolStripMenuItem.Name = "openDLLToolStripMenuItem";
-            this.openDLLToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.openDLLToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.openDLLToolStripMenuItem.Text = "Open DLL...";
             this.openDLLToolStripMenuItem.Click += new System.EventHandler(this.openDLLToolStripMenuItem_Click);
             // 
             // loadDefinitionToolStripMenuItem
             // 
             this.loadDefinitionToolStripMenuItem.Name = "loadDefinitionToolStripMenuItem";
-            this.loadDefinitionToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadDefinitionToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.loadDefinitionToolStripMenuItem.Text = "Load Definition...";
             this.loadDefinitionToolStripMenuItem.Click += new System.EventHandler(this.loadDefinitionToolStripMenuItem_Click);
             // 
             // saveCFileToolStripMenuItem
             // 
             this.saveCFileToolStripMenuItem.Name = "saveCFileToolStripMenuItem";
-            this.saveCFileToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveCFileToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.saveCFileToolStripMenuItem.Text = "Save C File";
             this.saveCFileToolStripMenuItem.Click += new System.EventHandler(this.saveCFileToolStripMenuItem_Click);
             // 
             // saveDEFFileToolStripMenuItem
             // 
             this.saveDEFFileToolStripMenuItem.Name = "saveDEFFileToolStripMenuItem";
-            this.saveDEFFileToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveDEFFileToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.saveDEFFileToolStripMenuItem.Text = "Save DEF File";
             this.saveDEFFileToolStripMenuItem.Click += new System.EventHandler(this.saveDEFFileToolStripMenuItem_Click);
             // 
@@ -138,59 +138,59 @@
             this.toolStripMenuItem2,
             this.generateToolStripMenuItem1});
             this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
-            this.generateToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.generateToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.generateToolStripMenuItem.Text = "Generate";
             // 
             // withasmJumpsToolStripMenuItem
             // 
             this.withasmJumpsToolStripMenuItem.Name = "withasmJumpsToolStripMenuItem";
-            this.withasmJumpsToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.withasmJumpsToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.withasmJumpsToolStripMenuItem.Text = "make all/selected with _asm jumps...";
             this.withasmJumpsToolStripMenuItem.Click += new System.EventHandler(this.withasmJumpsToolStripMenuItem_Click);
             // 
             // withCallsToolStripMenuItem
             // 
             this.withCallsToolStripMenuItem.Name = "withCallsToolStripMenuItem";
-            this.withCallsToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.withCallsToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.withCallsToolStripMenuItem.Text = "make all/selected with calls...";
             this.withCallsToolStripMenuItem.Click += new System.EventHandler(this.withCallsToolStripMenuItem_Click);
             // 
             // withLinksToolStripMenuItem
             // 
             this.withLinksToolStripMenuItem.Name = "withLinksToolStripMenuItem";
-            this.withLinksToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.withLinksToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.withLinksToolStripMenuItem.Text = "make all/selected with links...";
             this.withLinksToolStripMenuItem.Click += new System.EventHandler(this.withLinksToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(247, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(264, 6);
             // 
             // undecorateAllToolStripMenuItem
             // 
             this.undecorateAllToolStripMenuItem.Name = "undecorateAllToolStripMenuItem";
-            this.undecorateAllToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.undecorateAllToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.undecorateAllToolStripMenuItem.Text = "Undecorate All";
             this.undecorateAllToolStripMenuItem.Click += new System.EventHandler(this.undecorateAllToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(247, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(264, 6);
             // 
             // generateToolStripMenuItem1
             // 
             this.generateToolStripMenuItem1.Name = "generateToolStripMenuItem1";
             this.generateToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.generateToolStripMenuItem1.Size = new System.Drawing.Size(250, 22);
+            this.generateToolStripMenuItem1.Size = new System.Drawing.Size(267, 22);
             this.generateToolStripMenuItem1.Text = "Generate";
             this.generateToolStripMenuItem1.Click += new System.EventHandler(this.generateToolStripMenuItem1_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -199,13 +199,13 @@
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undecoratorToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // undecoratorToolStripMenuItem
             // 
             this.undecoratorToolStripMenuItem.Name = "undecoratorToolStripMenuItem";
-            this.undecoratorToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.undecoratorToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.undecoratorToolStripMenuItem.Text = "Undecorator";
             this.undecoratorToolStripMenuItem.Click += new System.EventHandler(this.undecoratorToolStripMenuItem_Click);
             // 
@@ -396,7 +396,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Proxy DLL Maker 1.3 by Warranty Voider";
+            this.Text = "Proxy DLL Maker 1.4 by Warranty Voider";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
